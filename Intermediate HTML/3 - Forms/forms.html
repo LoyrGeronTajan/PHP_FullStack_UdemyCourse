@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHP Fullstack Udemy Course</title>
+</head>
+
+<body>
+  <h1>Simple Form elements</h1>
+  <form action="results.html" method="GET">
+    <fieldset>
+      <legend><strong>INPUT BOX ELEMENT</strong></legend>
+      <label for="FirstName">First Name</label>
+      <input type="text" name="fname" id="fname" placeholder="Enter your First Name" required>
+
+      <br><br>
+
+      <label for="LastName">Last Name</label>
+      <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" required>
+
+      <br><br>
+
+      <label for="Age">Age</label>
+      <input type="number" name="age" id="age" placeholder="Enter your Age" required>
+
+      <br><br>
+
+      <label for="EmailAddress">Email Address</label>
+      <input type="email" name="email" id="email" placeholder="Enter your Email Address" required>
+
+      <br><br>
+
+      <label for="Phone">Phone</label>
+      <input type="phone" name="phone" id="phone" placeholder="0968****327" required>
+
+      <br><br>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Clear Form</button>
+    </fieldset>
+  </form>
+  <br><br>
+
+  <fieldset>
+    <legend><strong>SELECT FORM ELEMENT</strong></legend>
+
+    <form action="">
+      <label for="option">Select</label>
+      <select name="option" id="option">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+    </form>
+  </fieldset>
+
+  <br><br>
+
+  <fieldset>
+    <legend><strong>RADIO BUTTON</strong></legend>
+
+    <form action="">
+      <p>Gender</p>
+
+      <input type="radio" id="male" name="female" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="female" value="female">
+      <label for="female">Female</label>
+
+    </form>
+  </fieldset>
+
+  <br><br>
+
+  <fieldset>
+    <legend><strong>CHECK BOX</strong></legend>
+
+    <form action="">
+      <p>Check box Sample</p>
+
+      <input type="checkbox" id="check1" name="fav_language" value="check1">
+      <label for="check1">Sample 1</label>
+      <input type="checkbox" id="check2" name="fav_language" value="check2">
+      <label for="check2">Sample 2</label>
+
+    </form>
+  </fieldset>
+
+  <br><br>
+
+  <fieldset>
+    <legend><strong>TEXTAREA</strong></legend>
+
+    <form action="">
+      <p>Any suggestion ?</p>
+
+      <textarea name="comment" id="comment" cols="30" rows="5">Input here...</textarea>
+
+    </form>
+  </fieldset>
+  <br><br>
+  <hr>
+
+  <h1>Department of Computer Informatics Information Form </h1>
+
+  <fieldset>
+    <legend>Students Information</legend>
+    <form action="" method="post">
+      <label for="">ID Number</label>
+      <input type="text" name="idNum" id="" placeholder="2201 0086"> <br><br>
+
+      <label for="">Fullname</label>
+      <input type="text" name="fname" id="" placeholder="Enter your fullname.."> <br><br>
+      
+      <p>Courses</p>
+      <input type="radio" id="it" name="course" value="it">
+      <label for="it">Information Technology</label>
+      <input type="radio" id="cs" name="course" value="cs">
+      <label for="cs">Computer Science</label>
+      <br><br>
+
+      <label for="">Year Level</label>
+      <select name="year" id="year">
+        <option selected>...</option>
+        <option value="1st">1st Year</option>
+        <option value="2nd">2nd Year</option>
+        <option value="3rd">3rd Year</option>
+        <option value="4th">4th Year</option>
+      </select>
+
+      <br><br>
+      
+      <button type="submit">Submit</button>
+      <button type="reset">Clear Form</button>
+    </form>
+  </fieldset>
+
+  <p>The HTML <code>button</code> tag defines a clickable button.</p>
+
+  <p>The CSS <code>background-color</code> property defines the background color of an element.</p>
+</body>
+
+</html>
