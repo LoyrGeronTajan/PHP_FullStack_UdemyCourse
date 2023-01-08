@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Layout</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+    }
+    h1, header, nav, section, footer{
+      border: 1px solid black;
+      text-align: center;   
+      margin-bottom: 10px;
+      border-radius: 3px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+    }
+    header, footer {
+      padding: 20px 0;
+    }
+    nav, section {
+      padding: 200px 0;
+    }
+
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    nav, section, footer {
+      float: left;
+    }
+
+    nav {
+      width: 200px;
+      margin-right: 10px;
+    }
+    section {
+      width: 750px;
+       
+    }
+    footer {
+      width: 960px;
+      
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="container">
+    <h1>Website Page Layout</h1>
+    <header>Header</header>
+    <nav>Navigation</nav>
+    <section>Section</section>
+    <footer>Footer</footer>
+  </div>
+</body>
+
+</html>
