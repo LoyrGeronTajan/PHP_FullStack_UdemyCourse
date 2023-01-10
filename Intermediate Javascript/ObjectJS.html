@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects JS</title>
+  <script>
+    function Area(size1, size2){
+      this.width = 10; // Property
+      this.height = 100; // Property
+
+      this.getArea = function() {
+        return this.width * this.height;
+      }
+    }
+
+    // User Input
+    var width = prompt("Enter width: ");
+    var height = prompt("Enter height: ");
+    var result = 0;
+
+    // parseInt
+    width = parseInt(width);
+    height = parseInt(height);
+
+    // 
+    var area = new Area(width, height);
+    result = area.getArea(); // Function Method
+
+    console.log("Area: " + result);
+  </script>
+</head>
+<body>
+  <h1>Object JS</h1>
+</body>
+</html>
