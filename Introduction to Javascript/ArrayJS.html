@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array | DateAndTime | IF Statement JS</title>
+
+  <script>
+    // Arrays
+    var colorArray = ['white', 'red', 'green', 'yellow', 'black'];
+
+    console.log(colorArray);
+
+    // Date and Time
+    const minute = 1000 * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const year = day * 365;
+
+    var dateToday = new Date();
+    console.log(dateToday.toDateString());
+    console.log(dateToday.getFullYear());
+    console.log(dateToday.getDate());
+    console.log(Math.round(dateToday.getTime() / year));
+
+    // IF Statement
+    var marks = 40;
+    if(marks > 35) {
+      alert('You are Passed!');
+    } else {
+      alert('Try again!');
+    }
+  </script>
+
+</head>
+<body>
+  <h1>Array JS</h1>
+  <script>
+    // Arrays
+    document.write("Lenght of Array: " + colorArray.length + "<br> " + "List of Colors: " + colorArray)
+  </script>
+
+  <hr>
+
+  <h1>Date and Time</h1>
+
+  <script>
+    // Date and Time
+    document.write(" Date Today:" + dateToday.toDateString() + "<br> ");
+    document.write(" Year:" + dateToday.getFullYear() + "<br>");
+    document.write("Day: " + dateToday.getDate() + "<br>");
+    document.write("Time (YEAR): " + Math.round(dateToday.getTime() / year) + "<br>");
+  </script>
+
+  <hr>
+
+  <h1>IF Statement</h1>
+
+</body>
+</html>
