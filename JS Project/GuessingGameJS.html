@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game JS</title>
+  <script>
+    let message = "";
+    let min = 1; // minimum number
+    let max = 10; // maximum number
+
+    // Generate a random integer between min and max
+    let answer = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    let counter = 0;
+    let flag = false;
+
+    // To see the answer
+    console.log("The Correct answer: " + answer);
+
+  do {
+    var userInput = prompt("Guess number from 1 - 10 (You have 3 times to guess)");
+
+    userInput = parseInt(userInput);
+
+    if(userInput != answer) {
+      alert("Wrong number ❌");
+    }else {
+      flag = true;
+      break;
+    }
+
+    if(counter == 2) {
+      break;
+    }
+    counter++;
+
+  }while(answer != userInput);
+
+  if (flag) {
+    message += "You Guessed it right! " + answer +  " is the correct answer.";
+  } else {
+    message += "Better luck next time "  + answer +  " is the correct answer.";
+  }
+  
+
+  </script>
+</head>
+<body>
+  <h1>Guessing Game JS</h1>
+  <hr>
+  <script>
+    document.write(message);
+  </script>
+</body>
+</html>

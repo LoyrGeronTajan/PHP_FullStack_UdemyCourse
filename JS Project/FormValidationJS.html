@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation JS</title>
+
+  <script>
+    function formValidation(){
+      let alertMessage = "";
+
+      // Access the id's inside the form
+      let fname = document.getElementById('fname').value;
+      let email = document.getElementById('email').value;
+      let age = document.getElementById('age').value;
+
+      // Access the radio buttons
+      let male = document.getElementById('male').checked;
+      let female = document.getElementById('female').checked;
+
+      // Access the checkboxes  
+      let agreement = document.getElementById('agreement').checked;
+
+      // Alert Message
+      alertMessage += "Name: " + fname + "<br>";
+      alertMessage += "Email: " + email + "<br>";
+      alertMessage += "Age: " + age + "<br>";
+      alertMessage += "Male: " + male + "<br>";
+      alertMessage += "Female: " + female + "<br>";
+      alertMessage += "Agreement of Terms: " + agreement + "<br>";
+
+      document.getElementById('alertMessage').innerHTML = alertMessage;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Form Validation JS</h1>
+  <hr>
+  <fieldset>
+    <legend>Form Validation</legend>
+    <fieldset>
+      <legend>Output</legend>
+      <p id="alertMessage" style="color:red;font-weight:bold;"></p>
+    </fieldset>
+    <br>
+    <form action="./FormValidationJS.html" method="post" id="userForm">
+      
+      <label for="name">Name: </label>
+      <input type="text" name="fname" id="fname" placeholder="Enter your name..."> <br><br>
+
+      <label for="email">Email: </label>
+      <input type="text" name="email" id="email" placeholder="Enter your email..."> <br><br>
+
+      <label for="age">Age: </label>
+      <input type="text" name="age" id="age" placeholder="Enter your age..."> <br><br>
+
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="">Male</label>
+
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="">Female</label> <br><br>
+
+      <input type="checkbox" name="checkbox" id="agreement">
+      <label for="">Agree to our Terms</label> <br><br>
+
+      <button type="button" name="btn-submit" onclick="formValidation();">Submit</button>
+
+
+    </form>
+  </fieldset>
+
+</body>
+
+</html>
