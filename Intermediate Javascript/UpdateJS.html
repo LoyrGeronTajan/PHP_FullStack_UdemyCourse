@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update (onkeypress)</title>
+  <script>
+    function update() {
+      document.getElementById('showValue').innerHTML = document.getElementById('txt1').value;
+    }
+  </script>
+</head>
+<body>
+  <h1>Update Element onkeypress</h1>
+  <form action="">
+  <strong><p id="showValue"></p></strong>
+  <input type="text" id="txt1" onkeypress="update();">
+ 
+  <button type="reset" id="reset">Reset</button>
+</form>
+</body>
+</html>
