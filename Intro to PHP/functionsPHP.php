@@ -54,7 +54,45 @@
       echo $content;
     };
 
+    // Passing Reference to a Function
+    $results = 0;
+    function plus($num1, $num2, &$results = null) {
+      $results = $num1 + $num2;
+      return $results;
+    }
+    echo plus(20,30, $results);
 
+    // Exercise 1 Pass and Return Function
+    $result = 0;
+    function math(int $num1, int $num2, string $opr, &$result = null) {
+
+      if (!empty($opr)) {
+        $opr = strtolower($opr);
+
+        if($opr === '+' || $opr === 'add') {
+          $result = $num1 + $num2;
+          return $result;
+        } elseif($opr === '-' || $opr === 'sub') {
+          $result = $num1 - $num2;
+          return $result;
+        } elseif($opr === '*' || $opr === 'multiply') {
+          $result = $num1 * $num2;
+          return $result;
+        } elseif($opr === '/' || $opr === 'divide') {
+          $result = $num1 / $num2;
+          return $result;
+        }
+      } else {
+        echo 'Please enter an operator';
+      }
+    }
+
+    function getDiscountedPrice(int $price, int $discount, int &$discountedPrice = null)
+    {
+      // Formula to get the discount price from 20% discount
+      $discountedPrice = (($price * $discount) / 100);
+      return $discountedPrice;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -102,6 +140,44 @@
     <?= $printContent();?>
   </p>
 
+  <hr>
+
+  <h4>Passing Reference to a Function</h4>
+  <p><?= "This is Passing Reference to a Function: " . $results?></p>
+
+  <hr>
+
+  <h4>Exercise Pass and Return Function</h4>
+
+  <p>Enter two number and select an operator</p>
+  <fieldset>
+    <legend>Choose Operator</legend>
+    <ul>
+      <li>+ or add</li>
+      <li>- or sub</li>
+      <li>* or multiply</li>
+      <li>/ or divide</li>
+    </ul>
+  </fieldset>
+  <p>
+    <?php
+      echo "Result: " . number_format(math(10,5, 'add'),2);
+    ?>
+  </p>
+
+  <hr>
+
+  <h4>Get the Discounted Price to the Products</h4>
+  <fieldset>
+    <legend>Instruction.</legend>
+    <ol>
+      <li>Make a function getDiscountedPrice()</li>
+      <li>Pass Price and Discount percentage</li>
+      <li>Return the discountedPrice</li>
+      <li>Formula: discounted_price = original_price = ((original_price * discount) / 100);</li>
+    </ol>
+  </fieldset>
+  <p>Output: <?= getDiscountedPrice(500,20, $discountedPrice);?></p>
 </body>
 </html>
 
